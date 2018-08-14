@@ -3,7 +3,7 @@ class Api::TasksController < ApplicationController
     # GET /tasks
     def index
         # return sorted tasks by update
-        @tasks = Task.order('update_at DESC')
+        @tasks = Task.order('updated_at DESC')
     end
 
     # POST /tasks
