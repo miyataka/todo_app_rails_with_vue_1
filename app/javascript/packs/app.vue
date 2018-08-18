@@ -1,7 +1,9 @@
 <template>
   <div id="app">
-    <p>{{ message }}</p>
     <navbar></navbar>
+    <div class="container">
+        <router-view></router-view>
+    </div>
   </div>
 </template>
 
@@ -15,7 +17,7 @@ export default {
     }
   },
   components: {
-    'navbar': Header
+    'navbar': Header,
   }
 }
 </script>
