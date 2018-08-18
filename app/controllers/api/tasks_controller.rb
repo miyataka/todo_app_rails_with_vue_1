@@ -13,7 +13,7 @@ class Api::TasksController < ApplicationController
         if @task.save
             render :show, status: :created
         else
-            render json: @task.errors, status: unprocessable_entity
+            render json: @task.errors, status: :unprocessable_entity
         end
     end
 
@@ -21,9 +21,9 @@ class Api::TasksController < ApplicationController
     def update
         @task = Task.find(params[:id])
         if @task.update(task_params)
-            render :show, status: ok
+            render :show, status: :ok
         else
-            render json: @task.errors, status: unprocessable_entity
+            render json: @task.errors, status: :unprocessable_entity
         end
     end
 
